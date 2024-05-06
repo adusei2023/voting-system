@@ -96,7 +96,7 @@ body, html {
 	padding-bottom: 45px;
 }
 .login100-form-title {
-	font-family: Montserrat-ExtraBold;
+	font-family: Montserrat-ExtraBold, sans-serif;
 	font-size: 40px;
 	color: rgb(0, 0, 0);
 	line-height: 1.2;
@@ -153,8 +153,8 @@ a {
 	-ms-touch-action: manipulation;
 	touch-action: manipulation;
 }
-a {
-	font-family: Montserrat-Regular;
+/* Remove the duplicate selector "a" */
+	font-family: Montserrat-Regular, sans-serif;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -165,14 +165,14 @@ a {
 	-moz-transition: all 0.4s;
 }
 .txt1 {
-	font-family: Montserrat-Regular;
+	font-family: Montserrat-Regular, sans-serif;
 	font-size: 16px;
 	color: #cccccc;
 	line-height: 1.4;
 }
 .fa {
 	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
+	font: normal normal normal 14px/1 FontAwesome, sans-serif;
 	font-size: inherit;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
@@ -195,6 +195,7 @@ button, select {
 }
 [type=reset], [type=submit], button, html [type=button] {
 	-webkit-appearance: button;
+	appearance: button;
 }
 button {
 	outline: none !important;
@@ -202,7 +203,7 @@ button {
 	background: transparent;
 }
 .login100-form-btn {
-	font-family: Montserrat-Bold;
+	font-family: Montserrat-Bold, sans-serif;
 	font-size: 15px;
 	line-height: 1.5;
 	color: #ffffff;
@@ -239,7 +240,7 @@ button {
 	background: -webkit-linear-gradient(left, #005bea, #00c6fb);
 	background: -o-linear-gradient(left, #005bea, #00c6fb);
 	background: -moz-linear-gradient(left, #005bea, #00c6fb);
-	background: linear-gradient(left, #005bea, #00c6fb);
+	background: linear-gradient(to right, #005bea, #00c6fb);
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	-moz-transition: all 0.4s;
@@ -251,7 +252,7 @@ input {
 	border: none;
 }
 .input100 {
-	font-family: Montserrat-Bold;
+	font-family: Montserrat-Bold, sans-serif;
 	font-size: 15px;
 	line-height: 1.2;
 	color: #ffffff;
@@ -337,7 +338,7 @@ var x = document.getElementById("password");
         }
     </script>
 </head>
-<body style="background-image:url('{% static 'images/loginbg.jpg' %}'); background-size:cover; background-position:center;">
+<body style="background-image:url('{{% static 'images/loginbg.jpg' %}}'); background-size:cover; background-position:center;">
 	
     <div class="limiter"><div class="container-login100"><div class="wrap-login100 p-t-190 p-b-30">
 		<form class="login100-form validate-form" method="POST" action="login" onsubmit="validateCaptcha()">
